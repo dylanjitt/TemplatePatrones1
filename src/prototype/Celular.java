@@ -1,6 +1,6 @@
 package prototype;
 
-public class Celular {
+public class Celular implements Iphone {
 	
 	private String modelo;
 	private int tamaño;
@@ -60,6 +60,19 @@ public class Celular {
 	public void setOrigen(String origen) {
 		Origen = origen;
 	}
+	
+	@Override
+    public Celular clone() {
+		
+        Celular clone = new Celular(modelo);
+        clone.setPeso(peso);
+        clone.setCamara(camara);
+        clone.setTamaño(tamaño);
+        clone.setImei(imei);
+        clone.setOrigen(Origen);
+
+        return clone;
+    }
 	
 	public void infoCel() {
 		System.out.println("------------------");
