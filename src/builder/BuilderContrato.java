@@ -11,10 +11,11 @@ public abstract class BuilderContrato {
 		contrato = new Contrato();
 	}
 	
-	public abstract void infoContrato();
+	
 	public abstract void setCosto();
 	public abstract void setEmpresa();
 	public abstract void setCanales();
+	public abstract void infoContrato();
 	
 	
 
